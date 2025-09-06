@@ -1,93 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo isset($page_title) ? $page_title : 'HirMatic - AI-driven Recruitment'; ?></title>
-    <meta name="description" content="<?php echo isset($page_description) ? $page_description : 'Global HR Tech & Recruitment platform based in India, serving worldwide with AI-driven automation and scalable solutions'; ?>">
-    <meta name="keywords" content="<?php echo isset($page_keywords) ? $page_keywords : 'global recruitment from India, AI HR solutions, EOR for global hires, recruitment automation'; ?>">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="<?php echo isset($page_title) ? $page_title : 'HirMatic - AI-driven Recruitment'; ?>">
-    <meta property="og:description" content="<?php echo isset($page_description) ? $page_description : 'Global HR Tech & Recruitment platform based in India, serving worldwide with AI-driven automation and scalable solutions'; ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
-    <meta property="og:image" content="<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>/assets/images/hirmatic-og-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-</head>
-<body>
-    <!-- Header Navigation -->
-    <header class="header">
+ <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <nav class="nav">
-                <a href="index.php" class="logo">
-                    HirMatic
-                    <small style="color: #ccc; font-size: 0.6rem; font-weight: normal; margin-left: 10px;">Hire Global, Hire Automatic</small>
-                </a>
+            <div class="footer-content">
+                <div class="footer-section company-info">
+                    <a href="index.php" class="logo">HirMatic</a>
+                    <p style="margin: 1rem 0; color: #ccc;">
+                        Global HR Technology platform revolutionizing recruitment with AI-driven automation and scalable talent solutions.
+                    </p>
+                    <div class="company-legal">
+                        <p>KSA INC</p>
+                        <p>Riyadh, Saudi Arabia</p>
+                        <p>📧 contact@hirmatic.com</p>
+                        <p>📞 +966-XXX-XXXX</p>
+                    </div>
+                </div>
                 
-                <ul class="nav-links">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="employers.php">Employers</a></li>
-                    <li><a href="candidates.php">Candidates</a></li>
-                    <li><a href="blog.php">Blog</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="admin/" class="cta-button" style="padding: 8px 16px; font-size: 0.9rem;">Admin</a></li>
-                </ul>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="employers.php">For Employers</a></li>
+                        <li><a href="candidates.php">For Candidates</a></li>
+                        <li><a href="resume.php">Resume Analysis</a></li>
+                        <li><a href="careers.php">Career Services</a></li>
+                    </ul>
+                </div>
                 
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                    ☰
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobileMenu" class="mobile-menu" style="display: none;">
-        <div class="mobile-menu-content">
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="employers.php">Employers</a>
-            <a href="candidates.php">Candidates</a>
-            <a href="blog.php">Blog</a>
-            <a href="contact.php">Contact</a>
-            <a href="admin/">Admin</a>
-        </div>
-    </div>
-
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
-        }
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('mobileMenu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="blog.php">Blog</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="admin/">Admin Portal</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Data Protection</a></li>
+                    </ul>
+                </div>
+            </div>
             
-            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-                menu.style.display = 'none';
-            }
-        });
-    </script>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HirMatic by KSA INC. All rights reserved. | Powered by AI Technology</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+                    🦈 Shark seeks Wolf • Wolf seeks Shark 🐺 | Global Recruitment Made Effortless
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
