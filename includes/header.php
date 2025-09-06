@@ -17,9 +17,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
     
-    <!-- CSS -->
+    <!-- CSS - ONLY ONE LINK NOW -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
