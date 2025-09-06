@@ -1,0 +1,24 @@
+# Secure resume uploads directory
+# Prevent direct access to uploaded files
+
+# Deny all access
+Order Deny,Allow
+Deny from all
+
+# Allow only specific file types to be downloaded by authorized users
+<FilesMatch "\.(pdf|doc|docx)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Prevent execution of PHP scripts
+<FilesMatch "\.php$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Add security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options nosniff
+    Header set X-Frame-Options DENY
+</IfModule>
